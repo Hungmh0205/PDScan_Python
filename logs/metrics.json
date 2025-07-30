@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-07-30T08:32:20.606828",
+  "system_metrics": {
+    "total_scans": 1,
+    "successful_scans": 1,
+    "failed_scans": 0,
+    "total_matches": 17,
+    "total_duration": 27.871888,
+    "avg_duration": 27.871888,
+    "error_rate": 0.0,
+    "scans_by_adapter": {
+      "oracle": 1
+    },
+    "scans_by_user": {
+      "cli-user": 1
+    }
+  },
+  "recent_scans": [
+    {
+      "user_id": "cli-user",
+      "url": "oracle://thao_pham:CwN2oD6IbPsGoWL@10.22.13.51:1521/UNIPAY",
+      "start_time": "2025-07-30T08:31:52.734881",
+      "end_time": "2025-07-30T08:32:20.606769",
+      "duration": 27.871888,
+      "matches_count": 17,
+      "error": null,
+      "adapter_type": "oracle"
+    }
+  ]
+}

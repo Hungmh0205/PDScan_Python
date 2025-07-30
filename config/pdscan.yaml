@@ -1,0 +1,83 @@
+database:
+  connections:
+    - name: "local-sqlite"
+      type: "sqlite"
+      url: "sqlite:///test.db"
+      ssl: false
+      pool_size: 5
+      timeout: 30
+      retry_attempts: 2
+    - name: "prod-postgres"
+      type: "postgresql"
+      url: "postgresql://user:pass@host:5432/db"
+      ssl: true
+      pool_size: 10
+      timeout: 30
+      retry_attempts: 3
+    - name: "oracle-unipay"
+      type: "oracle"
+      url: "oracle://thao_pham:CwN2oD6IbPsGoWL@10.22.13.51:1521/UNIPAY"
+      host: "10.22.13.51"
+      port: 1521
+      service_name: "UNIPAY"
+      user: "thao_pham"
+      password: "CwN2oD6IbPsGoWL"
+      ssl: false
+      pool_size: 5
+      timeout: 30
+      retry_attempts: 3
+      fetch_size: 1000
+      target_schema: ""  # Để trống = quét tất cả schema
+
+security:
+  ssl_verify: true
+  certificate_path: "/path/to/certs"
+  encryption_key: "${ENCRYPTION_KEY}"
+
+scanning:
+  batch_size: 1000
+  max_workers: 4
+  timeout: 300
+
+logging:
+  level: "INFO"
+  file: "./pdscan.log"
+  rotation: "daily"
+
+webhook:
+  enabled: true
+  url: "http://localhost:9000/webhook"
+  timeout: 5
+  max_retries: 3
+  events:
+    - scan_complete
+    - scan_failed
+    - report_generated
+
+email:
+  enabled: true
+  smtp_server: "smtp.example.com"
+  smtp_port: 587
+  smtp_user: "noreply@example.com"
+  smtp_password: "yourpassword"
+  sender: "noreply@example.com"
+  recipients:
+    - "recipient@example.com"
+  use_tls: true
+  events:
+    - scan_complete
+    - scan_failed
+    - report_generated
+
+slack:
+  enabled: true
+  webhook_url: "https://hooks.slack.com/services/xxx/yyy/zzz"
+  timeout: 5
+  max_retries: 3
+  events:
+    - scan_complete
+    - scan_failed
+    - report_generated
+
+oracle:
+  pool_max: 20 
