@@ -456,4 +456,3 @@ Dự án này được cấp phép theo MIT License - xem file [LICENSE.txt](LIC
 
 ---
 
-**Made with ❤️ by the PDScan Team** 
