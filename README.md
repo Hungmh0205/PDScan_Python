@@ -437,20 +437,6 @@ pdscan postgresql://localhost/mydb --debug
 ## 📄 License
 
 Dự án này được cấp phép theo MIT License - xem file [LICENSE.txt](LICENSE.txt) để biết chi tiết.
-
-## 🆘 Hỗ trợ
-
-### Tài liệu
-- [API Documentation](http://localhost:8000/api/docs)
-- [Examples](examples/)
-- [Configuration Guide](config/)
-
-### Liên hệ
-- **Email**: support@pdscan.com
-- **Issues**: [GitHub Issues](https://github.com/yourusername/pdscan/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/pdscan/discussions)
-
-### Community
 - **Slack**: [Join our Slack](https://pdscan.slack.com)
 - **Discord**: [Join our Discord](https://discord.gg/pdscan)
 
